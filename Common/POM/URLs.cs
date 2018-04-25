@@ -5,12 +5,12 @@ namespace ERMPower.common.POM
     public class URLs
     {
 
-        static string WebServerAU { get { return ConfigurationManager.AppSettings["WebServerAU"]; } }
+        static string WebServer { get { return ConfigurationManager.AppSettings["WebServer"]; } }
        
 
         public static string GoToUrl()
         {
-            var currentUrl = WebServerAU;
+            var currentUrl = WebServer;
             return currentUrl;
         }
     }

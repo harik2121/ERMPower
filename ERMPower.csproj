@@ -81,21 +81,41 @@
     <Compile Include="Common\POM\DataHelpers.cs" />
     <Compile Include="Common\POM\SignupPageModel.cs" />
     <Compile Include="Common\POM\URLs.cs" />
-    <Compile Include="Features\SearchProducts.feature.cs">
+    <Compile Include="Features\LoginVerification.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SearchProducts.feature</DependentUpon>
+      <DependentUpon>LoginVerification.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\RegisterOnline.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterOnline.feature</DependentUpon>
     </Compile>
     <Compile Include="Common\Infra\Hooks.cs" />
-    <Compile Include="Steps\SearchProducts.cs" />
+    <Compile Include="Features\VerifyAPIResults.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VerifyAPIResults.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\LoginVerification.cs" />
+    <Compile Include="Steps\RegisterOnline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\VerifyAPIResults.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Features\SearchProducts.feature">
+    <None Include="Features\LoginVerification.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>SearchProducts.feature.cs</LastGenOutput>
+      <LastGenOutput>LoginVerification.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RegisterOnline.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RegisterOnline.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\VerifyAPIResults.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>VerifyAPIResults.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
