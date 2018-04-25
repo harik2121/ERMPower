@@ -8,14 +8,10 @@ namespace ERMPower.common.POM
         static string WebServerAU { get { return ConfigurationManager.AppSettings["WebServerAU"]; } }
        
 
-        public static string GoToUrlAU()
+        public static string GoToUrl()
         {
             var currentUrl = WebServerAU;
             return currentUrl;
         }
-
-      
-
-
     }
 }

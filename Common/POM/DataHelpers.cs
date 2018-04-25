@@ -7,20 +7,6 @@ namespace ERMPower.common.POM
     {
     private const string DayFormat = "ddd";
 
-        public class DeliveryDetails
-        {
-            public string Email { get; set; }
-            public string Confirmemail { get; set; }
-            public string Firstname { get; set; }
-            public string Lastname { get; set; }
-            public string Phone { get; set; }
-            public string Addressline1 { get; set; }
-            public string Addressline2 { get; set; }
-            public string Suburb { get; set; }
-            public string State { get; set; }
-            public string Postcode { get; set; }
-
-        }
         public static string RandomPhone
         {
             get

@@ -27,12 +27,10 @@ namespace ERMPower.common.POM
             FindElement(By.Id(ConfirmPassword)).SendKeys("p@ssWord");
         }
 
+        
         public void ClickOnSignupButton()
-        {
-          
+        {   
                 FindElement(SignupButton).Click();
-           
-           
         }
 
         public void ClickOnSigninButton()
