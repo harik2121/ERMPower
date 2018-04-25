@@ -77,6 +77,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Common\Infra\RetryClickElement.cs" />
+    <Compile Include="Common\Infra\RetryFindElement.cs" />
+    <Compile Include="Common\Infra\RetryWithTimeout.cs" />
     <Compile Include="Common\POM\BasePageModel.cs" />
     <Compile Include="Common\POM\DataHelpers.cs" />
     <Compile Include="Common\POM\SignupPageModel.cs" />
@@ -86,20 +89,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoginVerification.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\RegisterOnline.feature.cs">
+    <Compile Include="Common\Infra\Hooks.cs" />
+    <Compile Include="Features\UserRegistration.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RegisterOnline.feature</DependentUpon>
+      <DependentUpon>UserRegistration.feature</DependentUpon>
     </Compile>
-    <Compile Include="Common\Infra\Hooks.cs" />
     <Compile Include="Features\VerifyAPIResults.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>VerifyAPIResults.feature</DependentUpon>
     </Compile>
+    <Compile Include="Steps\GenericFunctions.cs" />
     <Compile Include="Steps\LoginVerification.cs" />
-    <Compile Include="Steps\RegisterOnline.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\UserRegistration.cs" />
     <Compile Include="Steps\VerifyAPIResults.cs" />
   </ItemGroup>
   <ItemGroup />
@@ -109,9 +113,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LoginVerification.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\RegisterOnline.feature">
+    <None Include="Features\UserRegistration.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>RegisterOnline.feature.cs</LastGenOutput>
+      <LastGenOutput>UserRegistration.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\VerifyAPIResults.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

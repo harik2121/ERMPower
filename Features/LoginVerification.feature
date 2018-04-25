@@ -4,7 +4,7 @@
 
 Scenario: Logon to nopCommerce web page
 	Given I go to the nopCommerce web page
-	When I click on login page
+	When I navigate on login page
 	Then I provide user login details
 	When I click on login button
 	Then Verify user login was sucessful

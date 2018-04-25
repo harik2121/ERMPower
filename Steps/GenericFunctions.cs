@@ -1,26 +1,27 @@
 ﻿using TechTalk.SpecFlow;
 
 namespace ERMPower.Steps
+
 {
     [Binding]
-    public sealed class VerifyAPIResults
+    public sealed class GenericFunctions
     {
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
-
-        [Given(@"I communicate to public API url")]
-        public void GivenICommunicateToPublicAPIUrl()
+        [Given(@"I go to the nopCommerce web page")]
+        public void GivenIGoToTheNopCommerceWebPage()
         {
             ScenarioContext.Current.Pending();
         }
 
-        [When(@"I have fetch API details")]
-        public void WhenIHaveFetchAPIDetails()
+        [When(@"I navigate to register page")]
+        public void WhenINavigateToRegisterPage()
         {
             ScenarioContext.Current.Pending();
         }
 
-        [Then(@"I verify API returned values")]
-        public void ThenIVerifyAPIReturnedValues()
+
+        [When(@"I navigate on login page")]
+        public void WhenINavigateOnLoginPage()
         {
             ScenarioContext.Current.Pending();
         }

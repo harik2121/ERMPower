@@ -73,7 +73,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 6
  testRunner.Given("I go to the nopCommerce web page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.When("I click on login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I navigate on login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
  testRunner.Then("I provide user login details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 9

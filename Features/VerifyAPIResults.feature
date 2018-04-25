@@ -1,11 +1,8 @@
 ﻿Feature: VerifyAPIResults
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	Verify API call results
 
 @mytag
-Scenario: Add two numbers
-	Given I have entered 50 into the calculator
-	And I have entered 70 into the calculator
-	When I press add
-	Then the result should be 120 on the screen
+Scenario: Verify API Results
+	Given I communicate to public API url
+	When I have fetch API details
+	Then I verify API returned values

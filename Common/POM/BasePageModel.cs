@@ -27,13 +27,6 @@ namespace ERMPower.common.POM
             Country = country;
         }
 
-        protected IWebElement FindElement(By by)
-        {
-            return new RetryFindElement(Driver, by)
-                .WithRetry(7)
-                .WithTimeout(1000)
-                .Execute();
-        }
-
+        
     }
 }

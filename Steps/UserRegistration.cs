@@ -1,22 +1,15 @@
-﻿using OpenQA.Selenium;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using TechTalk.SpecFlow;
-using System;
-using System.Configuration;
-using System.Threading;
-using NUnit.Framework;
 
 namespace CrossBrowserTests.Steps
 {
-
     [Binding]
-    public class RegisterOnline : Hooks
+    public sealed class UserRegistration
     {
-
-        [When(@"I click on register button")]
-        public void WhenIClickOnRegisterButton()
-        {
-            ScenarioContext.Current.Pending();
-        }
+        // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
 
         [Then(@"I provide user details in given fields")]
         public void ThenIProvideUserDetailsInGivenFields()
@@ -35,8 +28,5 @@ namespace CrossBrowserTests.Steps
         {
             ScenarioContext.Current.Pending();
         }
-
-
-
     }
 }

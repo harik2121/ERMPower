@@ -1,8 +1,7 @@
-﻿using System;
-using NUnit.Framework;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
-using System.Threading;
+using ERMPower.common.Infra;
+
 
 namespace ERMPower.common.POM
 {
@@ -14,23 +13,18 @@ namespace ERMPower.common.POM
         private static readonly By SigninButton = By.XPath("(//button[@type='submit'])[4]");
         public SignupPageModel(RemoteWebDriver webDriver) : base(webDriver, Country) { }
 
-        public void FillWith(string email, string FirstName, string LastName, string Mobile, string Email, string ConfirmEmail, string Password, string ConfirmPassword)
+        protected IWebElement FindElement(By by)
         {
-            FindElement(By.Id(FirstName)).SendKeys("Test");
-            FindElement(By.Id(LastName)).SendKeys("User1");
-            FindElement(By.Id(Mobile)).SendKeys(DataHelpers.RandomPhone);
-            Thread.Sleep(1000);
-            FindElement(By.Id(Email)).SendKeys(email);
-            Thread.Sleep(1000);
-            FindElement(By.Id(ConfirmEmail)).SendKeys(email);
-            FindElement(By.Id(Password)).SendKeys("p@ssWord");
-            FindElement(By.Id(ConfirmPassword)).SendKeys("p@ssWord");
+            return new RetryFindElement(Driver, by)
+                .WithRetry(7)
+                .WithTimeout(1000)
+                .Execute();
         }
 
-        
+
         public void ClickOnSignupButton()
         {   
-                FindElement(SignupButton).Click();
+             FindElement(SignupButton).Click();
         }
 
         public void ClickOnSigninButton()
