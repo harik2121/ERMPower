@@ -77,12 +77,16 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Common\POM\BasePageModel.cs" />
+    <Compile Include="Common\POM\DataHelpers.cs" />
+    <Compile Include="Common\POM\SignupPageModel.cs" />
+    <Compile Include="Common\POM\URLs.cs" />
     <Compile Include="Features\SearchProducts.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchProducts.feature</DependentUpon>
     </Compile>
-    <Compile Include="Common\Hooks.cs" />
+    <Compile Include="Common\Infra\Hooks.cs" />
     <Compile Include="Steps\SearchProducts.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
