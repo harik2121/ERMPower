@@ -1,16 +1,22 @@
 ﻿using TechTalk.SpecFlow;
+using ERMPower.common.POM;
+using ERMPower.common.Infra;
+using OpenQA.Selenium.Remote;
 
 namespace ERMPower.Steps
 
 {
     [Binding]
-    public sealed class GenericFunctions
+    public class GenericFunctions
     {
+        public RemoteWebDriver Driver { get; private set; }
+
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
         [Given(@"I go to the nopCommerce web page")]
         public void GivenIGoToTheNopCommerceWebPage()
         {
-            ScenarioContext.Current.Pending();
+            new BasePageModel(Driver).Gotohomepage();
+            Driver.Manage().Window.Maximize();
         }
 
         [When(@"I navigate to register page")]

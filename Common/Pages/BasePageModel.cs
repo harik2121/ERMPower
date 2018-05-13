@@ -11,7 +11,6 @@ namespace ERMPower.common.POM
     public class BasePageModel
     {
         protected RemoteWebDriver Driver { get; set; }
-        private string Country { get; set; }
         private readonly By Email = By.Id("Email");
         private readonly By FirstName = By.Id("FirstName");
         private readonly By LastName = By.Id("LastName");
@@ -21,12 +20,16 @@ namespace ERMPower.common.POM
         private readonly By Yourrole = By.Id("Password");
 
 
-        public BasePageModel(RemoteWebDriver driver, string country)
+        public BasePageModel(RemoteWebDriver driver)
         {
             Driver = driver;
-            Country = country;
         }
 
-        
+        public void Gotohomepage()
+        {
+            var url = URLs.GoToUrl();
+            Driver.Navigate().GoToUrl(url);
+        }
+
     }
 }
