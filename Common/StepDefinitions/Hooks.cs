@@ -7,10 +7,11 @@ using TechTalk.SpecFlow.Tracing;
 using OpenQA.Selenium;
 
 namespace CrossBrowserTests
+
 {
     [Binding]
-    public class Hooks : Steps.BaseStepDefinitions
-
+    public class Hooks :  Steps.BaseStepDefinitions
+        
     {
 
         // For additional details on SpecFlow hooks see http://go.specflow.org/doc-hooks
