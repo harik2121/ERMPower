@@ -1,5 +1,7 @@
 ﻿using TechTalk.SpecFlow;
 using ERMPower.common.POM;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 
 namespace ERMPower.Steps
 
@@ -21,7 +23,9 @@ namespace ERMPower.Steps
         public void WhenINavigateToRegisterPage()
         {
             SignupPage.ClickOnRegisterpButton();
-                
+
+            Assert.IsTrue(FindElement(By.ClassName("page-title")).Displayed);
+
         }
 
         
@@ -29,6 +33,7 @@ namespace ERMPower.Steps
         public void WhenINavigateOnLoginPage()
         {
             SignupPage.ClickOnLoginButton();
+            Assert.IsTrue(FindElement(By.ClassName("page-title")).Displayed);
         }
 
     }

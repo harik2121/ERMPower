@@ -20,7 +20,7 @@ namespace CrossBrowserTests.Steps
         [When(@"I click on register button")]
         public void WhenIClickOnRegisterButton()
         {
-            ScenarioContext.Current.Pending();
+            FindElement(By.Id("guest-account-button")).Click();
         }
 
         [Then(@"Verify user registration was sucessful")]

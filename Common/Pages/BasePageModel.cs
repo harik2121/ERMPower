@@ -18,6 +18,10 @@ namespace ERMPower.common.POM
         private readonly By Username = By.Id("Username");
         private readonly By Password = By.Id("Password");
         private readonly By Yourrole = By.Id("Password");
+        private readonly By Country = By.Id("Password");
+        private readonly By RegisterButton = By.Id("ctl00_ctl00_cph1_cph1_ctrlCustomerRegister_CreateUserForm___CustomNav0_StepNextButton");
+        private readonly By LoginButton = By.Id("ctl00_ctl00_cph1_cph1_ctrlCustomerLogin_LoginForm_LoginButton");
+
 
 
         public BasePageModel(RemoteWebDriver driver)
